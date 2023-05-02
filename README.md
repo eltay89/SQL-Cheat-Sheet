@@ -102,8 +102,9 @@ Other Information
 
 Feel free to suggest improvements or corrections via pull requests or issues.
 Employees Table
-
-| employee_id | first_name |    last_name	  |  salary |	department_id |
-|     123     | 	John     |  	   Doe     	|  60000  |     	1       |
-|     456     |	  Jane     |	    Smith     |	 75000	|       2       |
-|     789     | 	Bob      |     Johnson    |         |               |		
+```
+employee_id	first_name	last_name	salary	department_id
+    123	        John	      Doe	         60000	       1
+    456	        Jane	         Smith	    75000   	    2
+    789	        Bob	           Johnson
+```
