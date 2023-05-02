@@ -100,7 +100,8 @@ Sources
 This cheat sheet was created by Mohamed ELtay and is based on personal experience and various SQL resources.
 
 Feel free to suggest improvements or corrections via pull requests or issues.
-Employees Table
+
+# Employees Table
 ```
 employee_id	first_name	last_name	salary	department_id
     123	        John	         Doe	        60000	       1
