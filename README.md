@@ -94,7 +94,7 @@ GROUP BY department_id
 HAVING COUNT(*) > 5;
 ```
 
-## Subqueries
+## SubQueries
 
 A subquery is a query within another query. It is embedded within the WHERE or HAVING clause of the main query.
 
