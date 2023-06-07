@@ -94,22 +94,6 @@ GROUP BY department_id
 HAVING COUNT(*) > 5;
 ```
 
-### Project Status
-This SQL cheat sheet is complete and is suitable for use as a quick reference guide.
-Sources
-
-This cheat sheet was created by Mohamed ELtay and is based on personal experience and various SQL resources.
-
-Feel free to suggest improvements or corrections via pull requests or issues.
-
-# Employees Table
-```
-employee_id	first_name	last_name	salary	department_id
-    123	        John	         Doe	        60000	       1
-    456	        Jane	         Smith	        75000          2
-    789	        Bob	         Johnson
-```
-
 ## Subqueries
 
 A subquery is a query within another query. It is embedded within the WHERE or HAVING clause of the main query.
@@ -168,4 +152,20 @@ FROM groups;
 SELECT name, 
 (SELECT COUNT(*) FROM products WHERE products.group_id = groups.id) AS product_count 
 FROM groups;
+```
+
+### Project Status
+This SQL cheat sheet is complete and is suitable for use as a quick reference guide.
+Sources
+
+This cheat sheet was created by Mohamed ELtay and is based on personal experience and various SQL resources.
+
+Feel free to suggest improvements or corrections via pull requests or issues.
+
+# Employees Table
+```
+employee_id	first_name	last_name	salary	department_id
+    123	        John	         Doe	        60000	       1
+    456	        Jane	         Smith	        75000          2
+    789	        Bob	         Johnson
 ```
