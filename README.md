@@ -10,6 +10,7 @@
 - [JOIN statement](#join-statement)
 - [GROUP BY statement](#group-by-statement)
 - [HAVING statement](#having-statement)
+- [SUBQUERIES](#subqueries)
 
 ## Illustrations
 (Add any relevant images or diagrams here)
@@ -107,4 +108,64 @@ employee_id	first_name	last_name	salary	department_id
     123	        John	         Doe	        60000	       1
     456	        Jane	         Smith	        75000          2
     789	        Bob	         Johnson
+```
+
+## Subqueries
+
+A subquery is a query within another query. It is embedded within the WHERE or HAVING clause of the main query.
+
+### Use subqueries in the WHERE clause to:
+
+- Filter rows based on values from another table:
+
+```sql
+SELECT * FROM customers 
+WHERE country IN (SELECT country FROM countries WHERE region = 'Europe');
+```
+
+- Filter rows based on an aggregate value from another table:
+
+```sql 
+SELECT * FROM products 
+WHERE price > (SELECT AVG(price) FROM products);
+```
+
+- Filter rows that have matches in another table:
+
+```sql
+SELECT * FROM customers 
+WHERE EXISTS (SELECT 1 FROM orders WHERE orders.customer_id = customers.id); 
+``` 
+
+### Use subqueries in the FROM clause to:
+
+- Treat the subquery results as a temporary table:
+
+```sql
+SELECT * FROM (SELECT * FROM products WHERE price > 10) AS expensive_products;
+```
+
+- Join the subquery results with another table:
+
+```sql
+SELECT * FROM customers 
+JOIN (SELECT * FROM orders WHERE total > 100) AS big_orders 
+ON customers.id = big_orders.customer_id;
+```
+
+### Use subqueries in the SELECT clause to:  
+
+- Include an aggregate value from another table: 
+
+```sql
+SELECT name, (SELECT MAX(age) FROM users) AS max_age 
+FROM groups; 
+```
+
+- Include values from another table that depend on the main query:
+
+```sql
+SELECT name, 
+(SELECT COUNT(*) FROM products WHERE products.group_id = groups.id) AS product_count 
+FROM groups;
 ```
