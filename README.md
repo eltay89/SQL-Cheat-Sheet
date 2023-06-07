@@ -156,10 +156,7 @@ FROM groups;
 
 ### Project Status
 This SQL cheat sheet is complete and is suitable for use as a quick reference guide.
-Sources
-
 This cheat sheet was created by Mohamed ELtay and is based on personal experience and various SQL resources.
-
 Feel free to suggest improvements or corrections via pull requests or issues.
 
 # Employees Table
