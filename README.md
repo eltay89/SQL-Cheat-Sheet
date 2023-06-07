@@ -10,7 +10,7 @@
 - [JOIN statement](#join-statement)
 - [GROUP BY statement](#group-by-statement)
 - [HAVING statement](#having-statement)
-- [SUBQUERIES](#subqueries)
+- [SubQueries](#subqueries)
 
 ## Illustrations
 (Add any relevant images or diagrams here)
